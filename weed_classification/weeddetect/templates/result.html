@@ -1,0 +1,68 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background: linear-gradient(to right,red, blue);  /* Replace with your desired background color */
+            /* background-image: url("https://t3.ftcdn.net/jpg/02/60/33/42/360_F_260334226_GoVxOccWdMSDqu9KUQKKYThP9uJn7LGD.jpg"); */
+            background-image: url("{% static '/weeddetect/360_F_260334226_GoVxOccWdMSDqu9KUQKKYThP9uJn7LGD.jpg' %}");
+            background-size: cover;
+            font-family: sans-serif;
+            color: #fff;
+        }
+    
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 50px;
+            color: #000;
+        }
+    
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+            margin-left: 300px;
+            margin-right: 300px;
+            margin-bottom: 100px;
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 20px;
+        }
+    
+        input[type="submit"] {
+            background-color: #14e95b;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Analyzing..</title>
+</head>
+<body>
+    <p>
+        <form action="delete" method="post">
+        <h1>PREDICTIONS</h1>
+        {% load static %}
+        <img src="{% static img_pth %}" alt="" height="400" width="600">
+        <h1>
+            {{label}}
+        </h1>
+
+        <h1>
+            {{herb}}
+        </h1>
+    </form>
+</p>
+</body>
+</html>
